@@ -1,0 +1,175 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 4px rgba(88, 166, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 16px rgba(88, 166, 255, 0.4);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes levelUp {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    75% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes xpGain {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes timerWarning {
+
+    0%,
+    100% {
+        color: var(--accent-warning);
+    }
+
+    50% {
+        color: var(--accent-danger);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.animate-slideUp {
+    animation: slideUp 0.4s ease-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-hover) 50%, var(--bg-tertiary) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* 5.1: Staggered entry animation utility */
+.stagger-item {
+    opacity: 0;
+    animation: slideUp 0.35s ease-out forwards;
+}
+
+.stagger-item:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.stagger-item:nth-child(2) {
+    animation-delay: 60ms;
+}
+
+.stagger-item:nth-child(3) {
+    animation-delay: 120ms;
+}
+
+.stagger-item:nth-child(4) {
+    animation-delay: 180ms;
+}
+
+.stagger-item:nth-child(5) {
+    animation-delay: 240ms;
+}
+
+.stagger-item:nth-child(n+6) {
+    animation-delay: 300ms;
+}

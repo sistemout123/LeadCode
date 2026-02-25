@@ -1,0 +1,67 @@
+.analyzing-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.analyzing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-4);
+    padding: var(--sp-8) var(--sp-10);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+}
+
+.analyzing-spinner {
+    width: 48px;
+    height: 48px;
+    border: 3px solid var(--border-secondary);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.analyzing-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-1);
+}
+
+.analyzing-step {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--text-primary);
+}
+
+.analyzing-time {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+}
+
+.analyzing-dots {
+    display: flex;
+    gap: var(--sp-2);
+}
+
+.analyzing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-secondary);
+    transition: background var(--transition-base);
+}
+
+.analyzing-dot.active {
+    background: var(--accent-primary);
+}
